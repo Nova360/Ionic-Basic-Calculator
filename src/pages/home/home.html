@@ -1,14 +1,46 @@
-<ion-header>
-  <ion-navbar>
-    <ion-title>
-      Ionic Blank
-    </ion-title>
-  </ion-navbar>
-</ion-header>
 
-<ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
-</ion-content>
+      <ion-header>
+        <ion-nav color="primary">
+          <ion-title> Calculator App</ion-title>
+        </ion-nav>
+
+        <ion-toolbar color="primary">
+            <ion-title>Calculator App</ion-title>
+          </ion-toolbar>
+      </ion-header> 
+      
+        <ion-content>
+            <p id="ans" name="ans"></p>
+            <table>
+              <tr>
+                <td align="center">
+                    <button ion-button  round large color="light" (click)="display(7)">7</button>
+                    <button ion-button round large color="light" (click)="display(8)">8</button>
+                    <button ion-button round large color="light" (click)="display(9)">9</button>
+                    <button ion-button  round large color="light" (click)="display(4)">4</button>
+                    <button ion-button round large color="light" (click)="display(5)">5</button>
+                    <button ion-button round large color="light" (click)="display(6)">6</button>
+                    <button ion-button round large color="light" (click)="display(1)">1</button>
+                    <button ion-button  round large color="light" (click)="display(2)">2</button>
+                    <button ion-button  round large color="light" (click)="display(3)">3</button>
+                    <button ion-button round large color="secondary" (click)="display('.')">.</button>
+                    <button ion-button  round large color="light" (click)="display(0)">0</button>
+                    <button ion-button  round large color="secondary" (click)="equal()">=</button> 
+                </td>
+                <td align="center">
+                  <button ion-button  round large color="primary" (click)="display('+')">+</button>
+                  <button ion-button  round large color="secondary" (click)="display('-')">-</button>
+                  <button ion-button  round large color="cornflower" (click)="display('*')">*</button>
+                  <button ion-button   round large color="danger" (click)="display('/')"> /</button> 
+                </td>
+              </tr>
+              <tr>
+                <td align="center">
+                  <button ion-button  round large color="primary" (click)="allClear()">AC</button>
+                  <button ion-button round color="danger"></button>
+                </td>
+              </tr>
+              </table>
+         
+        </ion-content>
+
